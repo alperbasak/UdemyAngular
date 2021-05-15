@@ -1,4 +1,39 @@
-<!-- not being used, overridden in ts -->
+<!-- overrides ts -->
+<!-- Event Binding with () -->
+<!-- Property Binding with [] -->
+
+<label>Server Name</label>
+<!--This will update only on update of this specific input-->
+<!--<input type="text"-->
+<!--       class="form-control"-->
+<!--        (input)="onUpdateServerName($event)">-->
+
+<!-- Two-way data binding; This will listen to the variable and
+update with any change to that var-->
+<input type="text"
+       class="form-control"
+       [(ngModel)]="serverName">
+
+<!--<p>{{serverName}}</p>-->
+
+<button class="btn btn-primary"
+        [disabled]="!allowNewServer"
+        (click)="onCreateServer()">Add Server</button>
+<!-- Do not bind to 'onclick' for events! Only to 'click' -->
+
+<!-- String interpolation vs. Property binding-->
+<p>{{allowNewServer}}</p>
+<p [innerText]="allowNewServer"></p>
+
+<p>{{serverCreationStatus}}</p>
+
 <app-server></app-server>
 <app-server></app-server>
-<app-server></app-server>
+
+
+<!-- We are using all type of bindings in this example:
+String Interpolation to output the data
+Event Binding to listen to the click
+Property Binding to update the DOM element
+Two way binding to fetch and update the data
+-->
