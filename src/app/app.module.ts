@@ -8,6 +8,7 @@ import {ServersComponent} from './servers/servers.component';
 import {WarningComponent} from './alert/warning.component';
 import {SuccessComponent} from './alert/success.component';
 import { BindingAsgnmtComponent } from './binding-asgnmt/binding-asgnmt.component';
+import { DirectiveAsgnmtComponent } from './directive-asgnmt/directive-asgnmt.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BindingAsgnmtComponent } from './binding-asgnmt/binding-asgnmt.componen
     WarningComponent,
     SuccessComponent,
     ServersComponent,
-    BindingAsgnmtComponent
+    BindingAsgnmtComponent,
+    DirectiveAsgnmtComponent
   ],
   imports: [
     BrowserModule,
